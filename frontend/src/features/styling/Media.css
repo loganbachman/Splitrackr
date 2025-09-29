@@ -1,0 +1,145 @@
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .profile-section {
+        align-self: flex-end;
+    }
+
+    .menu-item.static {
+        cursor: default;
+        align-items: flex-start;
+        padding: 12px 10px;
+    }
+
+    .menu-item.static:hover {
+        background: transparent;
+    }
+
+    .profile-info-name,
+    .profile-info-meta {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .profile-info-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.2;
+    }
+
+    .profile-info-meta {
+        font-size: 12px;
+        color: var(--text-secondary);
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Landing Page */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .features-title {
+        font-size: 28px;
+    }
+
+    /* Auth Pages */
+    .auth-container {
+        max-width: 100%;
+    }
+
+    .auth-card {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Onboarding */
+    .onboarding-container {
+        max-width: 100%;
+    }
+
+    .onboarding-card {
+        padding: 24px;
+    }
+
+    .alt-action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Other responsive adjustments */
+    .household-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .switch-btn {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .expense-view .expense-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .expense-actions {
+        align-self: flex-end;
+    }
+
+    .expense-edit-actions {
+        flex-direction: column;
+    }
+
+    .settlement-summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .transfer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .transfer-amount {
+        align-self: flex-end;
+    }
+
+    .period-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+}

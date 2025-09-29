@@ -1,0 +1,136 @@
+/* Onboarding Pages */
+.onboarding-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.onboarding-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.onboarding-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.onboarding-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 16px 0;
+}
+
+.onboarding-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.onboarding-header p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.onboarding-card {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.invite-code-input {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.input-help {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 6px 0 0 0;
+    text-align: center;
+}
+
+.onboarding-alternatives {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.divider {
+    position: relative;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.divider span {
+    background: var(--bg-secondary);
+    padding: 0 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.alt-action {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--subtle-gradient);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.alt-action:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-secondary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.onboarding-footer {
+    text-align: center;
+}
+
+.logout-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.logout-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}

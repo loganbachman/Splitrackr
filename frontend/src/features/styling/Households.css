@@ -1,0 +1,67 @@
+/* Household List */
+.household-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.household-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.household-item:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.household-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.household-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+
+.household-details {
+    flex: 1;
+}
+
+.household-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+}
+
+.household-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.household-status.active {
+    background: #d1fae5;
+    color: #047857;
+    border: 1px solid #10b981;
+}

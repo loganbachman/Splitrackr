@@ -1,0 +1,235 @@
+/* Settlement History */
+.settlement-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.settlement-history-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.settlement-history-item:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.settlement-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background: var(--bg-primary);
+}
+
+.settlement-basic-info {
+    flex: 1;
+}
+
+.settlement-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.settlement-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settlement-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.settlement-status.status-open {
+    background: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fbbf24;
+}
+
+.settlement-status.status-finalized {
+    background: #d1fae5;
+    color: #047857;
+    border: 1px solid #10b981;
+}
+
+.settlement-transfers {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.settlement-details {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    padding: 16px;
+}
+
+/* Transfer List */
+.transfer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transfer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.transfer-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transfer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.transfer-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.2s ease;
+}
+
+.transfer-item.user-transfer {
+    border-color: var(--accent-blue);
+    background: var(--subtle-gradient);
+}
+
+.transfer-item.other-transfer:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.transfer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transfer-direction {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transfer-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.transfer-icon.outgoing {
+    color: var(--danger);
+}
+
+.transfer-icon.incoming {
+    color: var(--success);
+}
+
+.transfer-icon.neutral {
+    color: var(--text-secondary);
+}
+
+.transfer-text {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.transfer-amount {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Settlement Snapshot */
+.settlement-snapshot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settlement-info-card {
+    background: var(--subtle-gradient);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.settlement-period-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.period-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.period-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.period-dates {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.snapshot-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-blue);
+}
+
+.finalize-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.finalize-note {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 8px 0 0 0;
+}
