@@ -1,11 +1,15 @@
 FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /app
-COPY mvnw .
-COPY .mvn .mvn
+
+# Install Maven
+RUN apk add --no-cache maven
+
+# Copy project files
 COPY pom.xml .
-RUN ./mvnw dependency:go-offline
 COPY src src
-RUN ./mvnw package -DskipTests
+
+# Build the application
+RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
