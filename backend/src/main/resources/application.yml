@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+security:
+  jwt:
+    issuer: splitrackr
+    secret: ${JWT_SECRET}
+    audience: splitrackr-web
+    access-time: ${JWT_ACCESS_S:172800000}
+
+
+app:
+  cors:
+    allowed-origins: ${FRONTEND_ORIGIN}
+
+
