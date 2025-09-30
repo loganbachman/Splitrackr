@@ -56,7 +56,7 @@ const JoinForm = () => {
                             value={inviteCode}
                             onChange={e => setInviteCode(e.target.value.toUpperCase())}
                             onKeyPress={(e) => e.key === 'Enter' && joinHouse()}
-                            maxLength={6}
+                            maxLength={8}
                         />
                         <p className="input-help">
                             Ask your household member to share their invite code from the dashboard
