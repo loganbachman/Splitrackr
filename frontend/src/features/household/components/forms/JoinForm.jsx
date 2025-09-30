@@ -52,7 +52,7 @@ const JoinForm = () => {
                         <input
                             className="input invite-code-input"
                             type="text"
-                            placeholder="Enter the 6-char invite code"
+                            placeholder="Enter the 8-char invite code"
                             value={inviteCode}
                             onChange={e => setInviteCode(e.target.value.toUpperCase())}
                             onKeyPress={(e) => e.key === 'Enter' && joinHouse()}
