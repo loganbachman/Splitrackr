@@ -3,6 +3,7 @@ package com.splitrackr.backend.auth;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -31,6 +32,7 @@ public class SecurityConfig {
                 .cors(cors -> {})
                 .authorizeHttpRequests(
                         auth -> auth
+                                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                 .requestMatchers("/api/v1/auth/**").permitAll()
                                 .anyRequest()
                                 .authenticated()
@@ -46,7 +48,10 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
-        cfg.setAllowedOriginPatterns(List.of("*")); // Allow all origins for testing
+        cfg.setAllowedOriginPatterns(List.of(
+                "https://splitrackr.vercel.app",
+                "https://*.vercel.app"       // covers preview deployments
+        )); // Allow all origins for testing
         cfg.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         cfg.setAllowedHeaders(List.of("*")); // Allow all headers
         cfg.setAllowCredentials(true); // Important for JWT
