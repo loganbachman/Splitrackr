@@ -5,6 +5,7 @@ import '../../styling/Main.css'
 
 
 const HouseholdListPage = () => {
+    console.log('HouseholdListPage v2 loaded')
     const [houses, setHouses] = useState([])
     const [active, setActive] = useState(null)
     const navigate = useNavigate()
