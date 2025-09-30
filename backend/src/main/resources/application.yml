@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: ${DATABASE_URL}
+    url: ${JDBC_DATABASE_URL}
   jpa:
     hibernate:
       ddl-auto: update
